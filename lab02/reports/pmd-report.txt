@@ -1,0 +1,3 @@
+src/main/java/vacation/BasicVacationPackage.java:7:	ImmutableField:	ImmutableField: Field 'destination' may be declared final
+src/main/java/vacation/BasicVacationPackage.java:8:	ImmutableField:	ImmutableField: Field 'numberOfTravelers' may be declared final
+src/main/java/vacation/BasicVacationPackage.java:9:	ImmutableField:	ImmutableField: Field 'duration' may be declared final

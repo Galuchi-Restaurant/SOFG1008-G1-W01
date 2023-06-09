@@ -1,12 +1,10 @@
 package vacation;
 
-import java.util.ArrayList;
-
 public class BasicVacationPackage implements VacationPackage{
     private static final double BASECOST = 1000;
-    private Destination destination;
-    private int numberOfTravelers;
-    private int duration;
+    private final Destination destination;
+    private final int numberOfTravelers;
+    private final int duration;
     
     public BasicVacationPackage(Destination destination, int numberOfTravelers, int duration) {
         this.destination = destination;

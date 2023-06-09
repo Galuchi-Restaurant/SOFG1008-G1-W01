@@ -14,7 +14,9 @@ import vacation.GroupDiscountDecorator;
 import vacation.SpaAndWellnessPackageDecorator;
 
 
-public class App {
+final class App {
+    
+    private App() {};
     
     private static AddOn getAddOnByName(String name) {
         for (AddOn addOn : AddOn.values()) {
@@ -41,8 +43,8 @@ public class App {
                 throw new IllegalArgumentException("Invalid destination entered: " + destinationName);
             }
             
-            Destination vacationDestination = new Destination(destinationName);
-            System.out.println("You selected: "+ vacationDestination);
+            Destination destination = new Destination(destinationName);
+            System.out.println("You selected: "+ destinationName);
             System.out.println("Enter the number of travelers: ");
             
             int numberOfTravelers = scanner.nextInt();
@@ -93,7 +95,7 @@ public class App {
                 }
             }
             
-            VacationPackage vacationPackage = new BasicVacationPackage(vacationDestination,numberOfTravelers,daysTraveling);
+            VacationPackage vacationPackage = new BasicVacationPackage(destination,numberOfTravelers,daysTraveling);
 
 
             if (!selectedAddOns.isEmpty()) {
@@ -104,7 +106,7 @@ public class App {
                             vacationPackage = new AllInclusivePackageDecorator(vacationPackage);
                             System.out.println("Selected All-Inclusive.");
                             break;
-                        case ADVENTURE_ACTIVITIES:
+                        case ADV_ACTIVITIES:
                             vacationPackage = new AdventureActivitiesPackageDecorator(vacationPackage);
                             System.out.println("Selected Adventure Activities.");
                             break;

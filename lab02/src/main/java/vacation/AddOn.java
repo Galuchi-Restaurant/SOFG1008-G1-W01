@@ -2,7 +2,7 @@ package vacation;
 
 public enum AddOn {
     ALL_INCLUSIVE("All-Inclusive", 200.0),
-    ADVENTURE_ACTIVITIES("Adventure Activities", 150.0),
+    ADV_ACTIVITIES("Adventure Activities", 150.0),
     SPA_AND_WELLNESS("Spa and Wellness", 100.0);
 
     private final String name;
